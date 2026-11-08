@@ -46,6 +46,42 @@ body.intro-active canvas,body.intro-active .hud,body.intro-active #reset,body.in
 #audio-controls input[type=range]{width:94px;accent-color:#171717;cursor:pointer}
 #audio-controls button{position:static;transform:none;bottom:auto;left:auto;padding:7px 9px;opacity:.8}
 @media(max-width:700px){#audio-controls{left:auto;right:18px;bottom:58px;gap:6px}#audio-controls input[type=range]{width:72px}}
+
+/* Responsive gameplay layout */
+@media(max-width:700px){
+ .logo{left:12px;top:12px;width:clamp(100px,32vw,165px);max-width:38vw}
+ .meta{right:12px;top:12px;font-size:8px;letter-spacing:.12em;max-width:52vw}
+ .help{left:12px;bottom:68px;font-size:8px;letter-spacing:.12em;line-height:1.55;max-width:46vw}
+ .score{right:12px;bottom:68px;font-size:8px;letter-spacing:.12em;max-width:48vw}
+ button{font-size:8px;letter-spacing:.12em;padding:9px 8px;bottom:12px}
+ #reset{left:12px;bottom:12px;transform:none}
+ #pause{left:50%;bottom:12px;transform:translateX(-50%)}
+ #export{left:auto;right:12px;bottom:12px;transform:none}
+ #audio-controls{left:50%;right:auto;bottom:54px;transform:translateX(-50%);gap:8px;background:rgba(255,255,255,.88);padding:5px 8px}
+ #audio-controls button{font-size:8px;padding:6px 8px}
+ #audio-controls input[type=range]{width:clamp(60px,22vw,90px)}
+}
+@media(max-width:390px){
+ .help{max-width:42vw;font-size:7px}
+ .score{max-width:44vw;font-size:7px}
+ #reset,#pause,#export{font-size:7px;padding:8px 6px;letter-spacing:.08em}
+ #audio-controls{bottom:51px;gap:5px}
+ #audio-controls input[type=range]{width:58px}
+}
+@media(max-height:560px) and (orientation:landscape){
+ .logo{width:125px;top:8px;left:10px}
+ .meta{top:8px;right:10px}
+ .help,.score{bottom:56px}
+ button{bottom:8px;padding:6px 8px}
+ #reset,#pause,#export{bottom:8px}
+ #audio-controls{bottom:40px}
+ #startPage{padding:12px}
+ .start-logo{width:min(250px,40vw)}
+ .start-description{margin:12px auto;font-size:12px}
+ .start-guide{margin-bottom:14px}
+ .start-guide>div{padding:8px}
+ .start-credit{margin-top:10px}
+}
 </style></head>
 <body class="intro-active">
 <div id="startPage">
